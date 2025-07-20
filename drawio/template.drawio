@@ -1,0 +1,192 @@
+<mxfile host="app.diagrams.net" modified="2024-01-01T00:00:00.000Z" agent="5.0" etag="xxx" version="22.0.0" type="device">
+  <diagram name="系统整体架构图" id="system-architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- 标题 -->
+        <mxCell id="title" value="数字人系统整体架构图" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;fontStyle=1;fontColor=#2c3e50;" vertex="1" parent="1">
+          <mxGeometry x="400" y="20" width="300" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- 前端应用层 -->
+        <mxCell id="frontend-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="100" width="960" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend-title" value="前端应用层" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#01579b;" vertex="1" parent="1">
+          <mxGeometry x="100" y="110" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Windows桌面应用 -->
+        <mxCell id="desktop-app" value="Windows桌面应用&#xa;WPF/Electron&#xa;本地处理优先" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff6f00;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- Web管理界面 -->
+        <mxCell id="web-interface" value="Web管理界面&#xa;React/Vue&#xa;云端管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#8e24aa;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="320" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 移动端轻量版 -->
+        <mxCell id="mobile-app" value="移动端轻量版&#xa;React Native&#xa;云端处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#388e3c;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="520" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- API接口 -->
+        <mxCell id="api-service" value="API服务接口&#xa;RESTful API&#xa;第三方集成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="720" y="150" width="150" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 核心处理层 -->
+        <mxCell id="core-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#8e24aa;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="260" width="960" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="core-title" value="核心处理层" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#8e24aa;" vertex="1" parent="1">
+          <mxGeometry x="100" y="270" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 数字人生成引擎 -->
+        <mxCell id="avatar-engine" value="数字人生成引擎&#xa;3D建模 + 动画&#xa;实时渲染" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff6f00;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="310" width="180" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 音视频处理模块 -->
+        <mxCell id="media-processing" value="音视频处理模块&#xa;音频分析 + 编码&#xa;格式转换" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="340" y="310" width="180" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 实时渲染引擎 -->
+        <mxCell id="render-engine" value="实时渲染引擎&#xa;GPU加速渲染&#xa;效果后处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#388e3c;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="560" y="310" width="180" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 文件管理系统 -->
+        <mxCell id="file-system" value="文件管理系统&#xa;项目管理 + 存储&#xa;版本控制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="780" y="310" width="180" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- AI模型层 -->
+        <mxCell id="ai-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#388e3c;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="420" width="960" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="ai-title" value="AI模型层" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#388e3c;" vertex="1" parent="1">
+          <mxGeometry x="100" y="430" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 人脸重建模型 -->
+        <mxCell id="face-model" value="人脸重建模型&#xa;3DMM/FLAME&#xa;高精度建模" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff6f00;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="120" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 口型同步模型 -->
+        <mxCell id="lipsync-model" value="口型同步模型&#xa;Wav2Lip++&#xa;多语言支持" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="300" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 动作生成模型 -->
+        <mxCell id="motion-model" value="动作生成模型&#xa;骨骼动画系统&#xa;音乐驱动" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#8e24aa;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="480" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 表情生成模型 -->
+        <mxCell id="expression-model" value="表情生成模型&#xa;情感分析&#xa;微表情合成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="660" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+        
+        <!-- 优化加速模块 -->
+        <mxCell id="optimization" value="模型优化模块&#xa;量化加速&#xa;缓存机制" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="840" y="470" width="140" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 部署层 -->
+        <mxCell id="deploy-layer" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#ff6f00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="80" y="580" width="960" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="deploy-title" value="部署层" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#ff6f00;" vertex="1" parent="1">
+          <mxGeometry x="100" y="590" width="100" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- 本地部署 -->
+        <mxCell id="local-deploy" value="本地部署&#xa;RTX 3060+&#xa;一键安装包&#xa;离线处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#388e3c;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="150" y="620" width="150" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 云端部署 -->
+        <mxCell id="cloud-deploy" value="云端部署&#xa;GPU集群&#xa;弹性扩容&#xa;高并发处理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="370" y="620" width="150" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 混合部署 -->
+        <mxCell id="hybrid-deploy" value="混合部署&#xa;智能调度&#xa;本地预览&#xa;云端渲染" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#8e24aa;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="590" y="620" width="150" height="70" as="geometry" />
+        </mxCell>
+        
+        <!-- 监控运维 -->
+        <mxCell id="monitoring" value="监控运维&#xa;性能监控&#xa;日志分析&#xa;自动告警" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="810" y="620" width="150" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- 数据流箭头 -->
+        <mxCell id="arrow1" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="200" y="220" as="sourcePoint" />
+            <mxPoint x="200" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow2" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="220" as="sourcePoint" />
+            <mxPoint x="400" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow3" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="380" as="sourcePoint" />
+            <mxPoint x="190" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow4" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="430" y="380" as="sourcePoint" />
+            <mxPoint x="370" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="arrow5" value="" style="endArrow=classic;html=1;strokeColor=#666666;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="550" y="540" as="sourcePoint" />
+            <mxPoint x="550" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+
+        <!-- 数据流标签 -->
+        <mxCell id="flow-label1" value="用户请求" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="140" y="230" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow-label2" value="模型调用" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="140" y="390" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="flow-label3" value="部署执行" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="490" y="550" width="60" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 性能指标标注 -->
+        <mxCell id="perf-note" value="性能目标：&#xa;• RTX 3060: 1080p@30fps&#xa;• 口型同步精度: 95%+&#xa;• 响应时间: &lt;5秒" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff9c4;strokeColor=#d4af37;strokeWidth=2;fontSize=10;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="80" y="720" width="200" height="80" as="geometry" />
+        </mxCell>
+        
+        <!-- 技术栈标注 -->
+        <mxCell id="tech-note" value="核心技术栈：&#xa;• 前端: WPF, React, RN&#xa;• AI: PyTorch, ONNX&#xa;• 渲染: Unity, OpenGL&#xa;• 部署: Docker, K8s" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f7fa;strokeColor=#00acc1;strokeWidth=2;fontSize=10;fontStyle=0;align=left;" vertex="1" parent="1">
+          <mxGeometry x="300" y="720" width="200" height="80" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
