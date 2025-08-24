@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能汽车销售问题分析 - 完整PPT</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .presentation-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+        }
+
+        .slide-indicator {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .slide-dots {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+
+        .slide-nav-btn {
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 20px 15px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 60px;
+            min-height: 60px;
+        }
+
+        .slide-nav-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+            border-color: rgba(255, 255, 255, 0.6);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .slide-nav-btn:active {
+            transform: translateY(-50%) scale(0.95);
+        }
+
+        .slide-nav-btn.prev {
+            left: 20px;
+        }
+
+        .slide-nav-btn.next {
+            right: 20px;
+        }
+
+        .slide-nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+            transform: translateY(-50%) scale(1);
+        }
+
+        .slide-nav-btn:disabled:hover {
+            background: rgba(0, 0, 0, 0.7);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-50%) scale(1);
+        }
+
+        .fullscreen-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        .fullscreen-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+        }
+
+        .slide-info {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation-container">
+        <iframe id="slideFrame" class="slide-frame" src="slide1.html"></iframe>
+        
+        <button class="fullscreen-btn" onclick="toggleFullscreen()">
+            📺 全屏
+        </button>
+        
+        <button class="slide-nav-btn prev" onclick="previousSlide()" id="prevBtn">
+            ◀
+        </button>
+        
+        <button class="slide-nav-btn next" onclick="nextSlide()" id="nextBtn">
+            ▶
+        </button>
+        
+        <div class="slide-indicator">
+            <div class="slide-dots">
+                <div class="dot active" onclick="showSlide('slide1.html', 1)"></div>
+                <div class="dot" onclick="showSlide('slide2.html', 2)"></div>
+                <div class="dot" onclick="showSlide('slide3.html', 3)"></div>
+                <div class="dot" onclick="showSlide('slide4.html', 4)"></div>
+                <div class="dot" onclick="showSlide('slide5.html', 5)"></div>
+                <div class="dot" onclick="showSlide('slide6.html', 6)"></div>
+                <div class="dot" onclick="showSlide('slide7.html', 7)"></div>
+                <div class="dot" onclick="showSlide('slide8.html', 8)"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+        let startX = 0;
+        let startY = 0;
+        let isDragging = false;
+        
+        function showSlide(slideFile, slideNum) {
+            document.getElementById('slideFrame').src = slideFile;
+            currentSlide = slideNum;
+            
+            // 更新指示器状态
+            updateSlideIndicator();
+            // 更新导航按钮状态
+            updateNavButtons();
+        }
+        
+        function updateSlideIndicator() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.remove('active');
+                if (index === currentSlide - 1) {
+                    dot.classList.add('active');
+                }
+            });
+        }
+        
+        function updateNavButtons() {
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            
+            // 第一页时禁用上一页按钮
+            prevBtn.disabled = currentSlide === 1;
+            
+            // 最后一页时禁用下一页按钮
+            nextBtn.disabled = currentSlide === 8;
+        }
+        
+        function previousSlide() {
+            if (currentSlide > 1) {
+                showSlide(`slide${currentSlide - 1}.html`, currentSlide - 1);
+            }
+        }
+        
+        function nextSlide() {
+            if (currentSlide < 8) {
+                showSlide(`slide${currentSlide + 1}.html`, currentSlide + 1);
+            }
+        }
+        
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+        
+        // 触摸事件处理
+        function handleTouchStart(e) {
+            startX = e.touches[0].clientX;
+            startY = e.touches[0].clientY;
+        }
+        
+        function handleTouchEnd(e) {
+            if (!startX || !startY) return;
+            
+            const endX = e.changedTouches[0].clientX;
+            const endY = e.changedTouches[0].clientY;
+            
+            const diffX = startX - endX;
+            const diffY = startY - endY;
+            
+            // 判断滑动方向
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
+                if (diffX > 0 && currentSlide < 8) {
+                    // 向左滑动，下一页
+                    showSlide(`slide${currentSlide + 1}.html`, currentSlide + 1);
+                } else if (diffX < 0 && currentSlide > 1) {
+                    // 向右滑动，上一页
+                    showSlide(`slide${currentSlide - 1}.html`, currentSlide - 1);
+                }
+            }
+            
+            startX = 0;
+            startY = 0;
+        }
+        
+        // 鼠标拖拽事件处理
+        function handleMouseDown(e) {
+            startX = e.clientX;
+            startY = e.clientY;
+            isDragging = true;
+        }
+        
+        function handleMouseMove(e) {
+            if (!isDragging) return;
+            
+            const diffX = startX - e.clientX;
+            const diffY = startY - e.clientY;
+            
+            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 100) {
+                if (diffX > 0 && currentSlide < 8) {
+                    // 向左拖拽，下一页
+                    showSlide(`slide${currentSlide + 1}.html`, currentSlide + 1);
+                } else if (diffX < 0 && currentSlide > 1) {
+                    // 向右拖拽，上一页
+                    showSlide(`slide${currentSlide - 1}.html`, currentSlide - 1);
+                }
+                isDragging = false;
+            }
+        }
+        
+        function handleMouseUp() {
+            isDragging = false;
+        }
+        
+        // 键盘导航支持
+        document.addEventListener('keydown', function(event) {
+            switch(event.key) {
+                case 'ArrowRight':
+                case ' ':
+                    if (currentSlide < 8) {
+                        showSlide(`slide${currentSlide + 1}.html`, currentSlide + 1);
+                    }
+                    break;
+                case 'ArrowLeft':
+                    if (currentSlide > 1) {
+                        showSlide(`slide${currentSlide - 1}.html`, currentSlide - 1);
+                    }
+                    break;
+                case 'Home':
+                    showSlide('slide1.html', 1);
+                    break;
+                case 'End':
+                    showSlide('slide8.html', 8);
+                    break;
+            }
+        });
+        
+        // 触摸事件监听
+        document.addEventListener('touchstart', handleTouchStart, { passive: true });
+        document.addEventListener('touchend', handleTouchEnd, { passive: true });
+        
+        // 鼠标事件监听
+        document.addEventListener('mousedown', handleMouseDown);
+        document.addEventListener('mousemove', handleMouseMove);
+        document.addEventListener('mouseup', handleMouseUp);
+        
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            updateSlideIndicator();
+            updateNavButtons();
+        });
+    </script>
+</body>
+</html> 

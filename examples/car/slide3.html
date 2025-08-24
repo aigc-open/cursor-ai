@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主要销售问题</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .slide-container {
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fef2f2;
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .problem-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .problem-item {
+            display: flex;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #ef4444;
+        }
+
+        .problem-icon {
+            width: 50px;
+            height: 50px;
+            background: #ef4444;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .problem-text {
+            flex: 1;
+        }
+
+        .problem-title {
+            font-weight: bold;
+            color: #dc2626;
+            margin-bottom: 5px;
+        }
+
+        .problem-desc {
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+
+        .slide-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide-header">
+            <h1 class="text-3xl font-bold text-red-800">主要销售问题</h1>
+        </div>
+        
+        <div class="slide-content">
+            <div class="problem-list">
+                <div class="problem-item">
+                    <div class="problem-icon">💰</div>
+                    <div class="problem-text">
+                        <div class="problem-title">价格过高</div>
+                        <div class="problem-desc">智能汽车价格普遍偏高，超出普通消费者预算范围</div>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🔒</div>
+                    <div class="problem-text">
+                        <div class="problem-title">安全疑虑</div>
+                        <div class="problem-desc">消费者对自动驾驶安全性存在担忧，影响购买决策</div>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">🔋</div>
+                    <div class="problem-text">
+                        <div class="problem-title">续航焦虑</div>
+                        <div class="problem-desc">电池续航里程不足，充电设施不完善</div>
+                    </div>
+                </div>
+                <div class="problem-item">
+                    <div class="problem-icon">📱</div>
+                    <div class="problem-text">
+                        <div class="problem-title">技术复杂</div>
+                        <div class="problem-desc">功能过于复杂，用户体验不够友好</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            3 / 8
+        </div>
+    </div>
+</body>
+</html> 

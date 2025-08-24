@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>解决方案策略</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .slide-container {
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #ecfdf5;
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .solution-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #10b981;
+            position: relative;
+        }
+
+        .solution-icon {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            width: 30px;
+            height: 30px;
+            background: #10b981;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1rem;
+        }
+
+        .solution-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #065f46;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+
+        .solution-desc {
+            color: #374151;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .solution-actions {
+            color: #059669;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .slide-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide-header">
+            <h1 class="text-3xl font-bold text-green-800">解决方案策略</h1>
+        </div>
+        
+        <div class="slide-content">
+            <div class="solution-grid">
+                <div class="solution-card">
+                    <div class="solution-icon">💰</div>
+                    <div class="solution-title">价格策略优化</div>
+                    <div class="solution-desc">
+                        推出分期付款、租赁模式、置换补贴等多样化购车方案，降低消费者购车门槛
+                    </div>
+                    <div class="solution-actions">
+                        ✓ 分期付款计划 ✓ 租赁服务 ✓ 置换补贴
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">🔒</div>
+                    <div class="solution-title">安全保障体系</div>
+                    <div class="solution-desc">
+                        建立完善的安全测试体系，提供保险保障，增强消费者对产品安全性的信心
+                    </div>
+                    <div class="solution-actions">
+                        ✓ 安全测试认证 ✓ 保险保障 ✓ 售后支持
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">🔋</div>
+                    <div class="solution-title">基础设施完善</div>
+                    <div class="solution-desc">
+                        加快充电桩建设，提供换电服务，解决续航焦虑问题
+                    </div>
+                    <div class="solution-actions">
+                        ✓ 充电网络 ✓ 换电服务 ✓ 移动充电
+                    </div>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon">📱</div>
+                    <div class="solution-title">用户体验提升</div>
+                    <div class="solution-desc">
+                        简化操作界面，提供个性化定制，增强人机交互体验
+                    </div>
+                    <div class="solution-actions">
+                        ✓ 界面优化 ✓ 个性化定制 ✓ 智能助手
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            6 / 8
+        </div>
+    </div>
+</body>
+</html> 

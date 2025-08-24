@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>消费者调研分析</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .slide-container {
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f0f9ff;
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .content-wrapper {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .chart-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .pie-chart {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: conic-gradient(
+                #3b82f6 0deg 126deg,
+                #10b981 126deg 234deg,
+                #f59e0b 234deg 306deg,
+                #ef4444 306deg 360deg
+            );
+            margin: 0 auto 20px;
+            position: relative;
+        }
+
+        .chart-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .stats-section {
+            flex: 1;
+        }
+
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .stat-label {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .stat-value {
+            color: #1f2937;
+            font-weight: bold;
+        }
+
+        .slide-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #374151;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide-header">
+            <h1 class="text-3xl font-bold text-blue-800">消费者调研分析</h1>
+        </div>
+        
+        <div class="slide-content">
+            <div class="content-wrapper">
+                <div class="chart-section">
+                    <div class="pie-chart"></div>
+                    <h3 class="text-lg font-semibold text-gray-700 mb-4">购买意愿分布</h3>
+                    <div class="chart-legend">
+                        <div class="legend-item">
+                            <div class="legend-color bg-blue-500"></div>
+                            <span>强烈购买意愿 (35%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bg-green-500"></div>
+                            <span>考虑购买 (30%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bg-yellow-500"></div>
+                            <span>观望态度 (20%)</span>
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-color bg-red-500"></div>
+                            <span>不感兴趣 (15%)</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="stats-section">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">关键调研数据</h3>
+                    <div class="stat-row">
+                        <span class="stat-label">平均预算范围</span>
+                        <span class="stat-value">25-35万</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">最关注功能</span>
+                        <span class="stat-value">自动驾驶</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">购买决策周期</span>
+                        <span class="stat-value">3-6个月</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">品牌忠诚度</span>
+                        <span class="stat-value">中等</span>
+                    </div>
+                    <div class="stat-row">
+                        <span class="stat-label">试驾转化率</span>
+                        <span class="stat-value">45%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            4 / 8
+        </div>
+    </div>
+</body>
+</html> 

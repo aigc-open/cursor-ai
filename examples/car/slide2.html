@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>市场现状分析</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        .slide-container {
+            height: 720px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #f8fafc;
+        }
+
+        .slide-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .slide-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-left: 4px solid #3b82f6;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #3b82f6;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1.1rem;
+            color: #64748b;
+        }
+
+        .slide-footer {
+            text-align: center;
+            margin-top: 20px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide-header">
+            <h1 class="text-3xl font-bold text-gray-800">市场现状分析</h1>
+        </div>
+        
+        <div class="slide-content">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">45%</div>
+                    <div class="stat-label">年增长率</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">280万</div>
+                    <div class="stat-label">2024年销量</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">68%</div>
+                    <div class="stat-label">消费者关注度</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">15%</div>
+                    <div class="stat-label">市场份额</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slide-footer">
+            2 / 8
+        </div>
+    </div>
+</body>
+</html> 
